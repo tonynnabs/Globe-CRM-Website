@@ -101,8 +101,11 @@ $display-narrow: 375;
     justify-content: center;
 
     button {
+        @include fluid('padding-right', 10, 20);
+        @include fluid('padding-left', 8, 20);
         border-radius: 5px;
-        padding: 1rem 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         margin: 0rem 1rem 0rem 1rem;
     }
 

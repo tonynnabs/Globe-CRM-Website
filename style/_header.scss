@@ -91,22 +91,31 @@ nav {
         top: 0;
         width: 100%;
         height: 100vh;
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        justify-items: center;
         align-items: center;
-        justify-content: space-evenly;
         clip-path: circle(100px at 100% -20%);
         transition: all 0.5s ease-in-out;
+        padding: 10rem;
+        flex-wrap: wrap;
 
 
 
         li {
             color: white;
             opacity: 0;
-            @include fluid('font-size', 14, 30);
+            @include fluid('font-size', 16, 30);
             font-weight: 300;
 
         }
+
+    }
+
+    .nav-links li:last-child {
+        grid-column: 1/3;
+        grid-row: 3/4;
     }
 
     .nav-links.open {
