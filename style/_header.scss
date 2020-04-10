@@ -98,7 +98,7 @@ nav {
         align-items: center;
         clip-path: circle(100px at 100% -20%);
         transition: all 0.5s ease-in-out;
-        padding: 10rem;
+        @include fluid('padding', 50, 100);
         flex-wrap: wrap;
 
 
