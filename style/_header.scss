@@ -1,0 +1,141 @@
+.main-head {
+    background-color: $background-color;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 10vh;
+    width: 90%;
+    margin: auto;
+}
+
+#logo {
+    margin-right: auto;
+
+    img {
+        @include fluid('width', 100, 180);
+    }
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 50px;
+    flex-basis: 60rem;
+
+    li {
+        color: white;
+    }
+}
+
+.get-started {
+    padding: 1rem 1rem;
+
+    button {
+        @include fluid('font-size', 12, 20);
+        padding: 0.5rem 2rem;
+        text-decoration: none;
+        border: 2px solid #43da86;
+        border-radius: 5rem;
+        background-color: rgba(255, 255, 255, 0);
+        color: white;
+        cursor: pointer;
+    }
+}
+
+
+
+// MOBILE VIEW--------------------
+
+@media screen and (max-width: 1094px) {
+
+    .overflowhidden {
+        overflow-y: hidden;
+    }
+
+    .burger div {
+        width: 5rem;
+        height: 4px;
+        margin: 6px;
+        background-color: white;
+        z-index: 2;
+    }
+
+    .toggle .top {
+        transform: rotate(-45deg) translate(-5px, 9px);
+        background-color: white;
+    }
+
+    .toggle .middle {
+        opacity: 0;
+    }
+
+    .toggle .bottom {
+        transform: rotate(45deg) translate(-5px, -9px);
+        background-color: white;
+    }
+
+    .line {
+        transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s;
+    }
+
+
+    // BURGER ANIMATION ----------------------
+    .nav-links {
+        position: fixed;
+        left: 0;
+        background-color: #20272c;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        clip-path: circle(100px at 100% -20%);
+        transition: all 0.5s ease-in-out;
+
+
+
+        li {
+            color: white;
+            opacity: 0;
+            @include fluid('font-size', 14, 30);
+            font-weight: 300;
+
+        }
+    }
+
+    .nav-links.open {
+        clip-path: circle(2000px at 90% -20%);
+        pointer-events: all;
+
+        li {
+            animation: menuLinkFade 1s forwards;
+        }
+
+    }
+
+    @keyframes menuLinkFade {
+        from {
+            opacity: 0;
+            transform: translateY(-50px)
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0px)
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 320px) {
+    .get-started {
+        display: none;
+    }
+}

@@ -1,0 +1,121 @@
+.how-it-works {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+
+    div svg {
+        @include fluid('width', 40, 90);
+    }
+
+    h1 {
+        @include fluid('margin-top', 20, 50);
+    }
+
+    p {
+        line-height: 1.9;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+    }
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.easy-to-use {
+    align-self: flex-start;
+    margin-top: 15rem;
+    flex: 1 1 20rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.complete-solution {
+    align-self: flex-start;
+    margin-top: 15rem;
+    flex: 1 1 20rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.no-more {
+    align-self: flex-start;
+    margin-top: 15rem;
+    flex: 1 1 20rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+#bottom-line {
+    animation: bottomLine 1s infinite linear alternate;
+
+}
+
+#second-line {
+    animation: middleLine 1s infinite linear alternate;
+}
+
+#book {
+    animation: book 1s infinite alternate;
+}
+
+#flow-body {
+    stroke-dasharray: 80;
+    stroke-dashoffset: 80;
+    animation: lineanimate 1s ease infinite alternate;
+}
+
+@keyframes bottomLine {
+    from {
+        transform: translateX(0%)
+    }
+
+    to {
+        transform: translateX(30%)
+    }
+}
+
+@keyframes middleLine {
+    from {
+        transform: translateX(0%)
+    }
+
+    to {
+        transform: translateX(-30%)
+    }
+}
+
+@keyframes book {
+    from {
+        transform: translateY(0%)
+    }
+
+    to {
+        transform: translateY(-20%)
+    }
+}
+
+@keyframes lineanimate {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@media screen and (max-width: 617px) {
+    .how-it-works {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .complete-solution,
+    .easy-to-use,
+    .no-more {
+        // flex-grow: unset;
+        // flex-basis: unset;
+        margin-top: 0rem;
+    }
+}

@@ -1,0 +1,95 @@
+.customer-container {
+    width: 90%;
+    margin: auto;
+    min-height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.customer-button {
+    @include fluid('padding-right', 5, 20);
+    @include fluid('padding-left', 5, 20);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: none;
+    background-color: $second-color;
+    color: white;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 3s ease-out;
+    animation: fadingOut 0.5s ease-in-out forwards;
+    z-index: 3;
+
+}
+
+
+
+.customer-container:hover {
+    .customers {
+        filter: blur(6px);
+        transition: all 0.3s ease-in;
+
+        li img {
+            margin: 1.5rem;
+            transition: all 0.3s ease-in;
+        }
+    }
+
+    .customer-button {
+        animation: fadingUp 0.5s ease-in-out forwards;
+        ;
+    }
+}
+
+
+.customers {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    pointer-events: none;
+    flex-wrap: wrap;
+    filter: blur(0px);
+    transition: all 0.5s ease-out;
+    padding: 0rem 3rem 0rem 3rem;
+
+    li img {
+        height: 22px;
+        margin: 2rem;
+        transition: all 0.5s ease-out;
+    }
+}
+
+@keyframes fadingUp {
+    from {
+        top: 60%;
+        opacity: 0;
+    }
+
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+@keyframes fadingOut {
+    from {
+        top: 50%;
+        opacity: 1;
+    }
+
+    to {
+        top: 60%;
+        opacity: 0;
+
+    }
+}

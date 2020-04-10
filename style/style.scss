@@ -1,0 +1,129 @@
+$header1: 3.5rem;
+$header2: 2rem;
+$header3: 25;
+$header4: 3rem;
+$text: 1.9rem;
+$hero: 8rem;
+$semi-hero: 40;
+$footer: 20;
+$gradient: linear-gradient(to left, #38d39f, #38a4d3);
+$background-color: #2c353c;
+$second-color: #53c4f4;
+$green-color: #43da86;
+$light-blue:#eff9fe;
+$gray-text: rgb(29, 29, 29);
+
+$display-wide: 1920;
+$display-narrow: 375;
+
+@mixin fluid($property, $minValue, $maxValue) {
+    $x: ($maxValue - $minValue)/($display-wide - $display-narrow);
+    $y: $maxValue - $display-wide * $x;
+    #{$property}: calc(#{100*$x}vw + #{$y}px);
+}
+
+@import 'global';
+@import 'header';
+@import 'hero';
+@import 'how';
+@import 'projection';
+@import 'customers';
+@import 'footer';
+
+/*---------- SMART DASHBOARD CSS -------------*/
+.smart-dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    background-image: url('../img/splash.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    object-fit: clip;
+}
+
+.splash-container {
+    width: 60%;
+    margin: auto;
+}
+
+.splash-content {
+    text-align: center;
+    color: white;
+
+    h1 {
+        @include fluid('font-size', 30, 80);
+    }
+
+    button {
+        margin-top: 3rem;
+        border: none;
+        padding: 1rem 3rem;
+        color: $background-color;
+        background-color: $second-color;
+        border-radius: 3px;
+    }
+
+    button:hover {
+        background-color: $green-color;
+        transition: all 0.5s linear;
+        cursor: pointer;
+    }
+}
+
+/*---------- CALLOUT FOOTER-------------*/
+.callout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40vh;
+    align-items: center;
+    background-image: url('../img/bg-footer.svg');
+    background-size: cover;
+    background-position: center;
+    object-fit: clip;
+    margin-top: 8rem;
+
+    h1 {
+        @include fluid('font-size', 30, $semi-hero);
+        color: white;
+        padding-bottom: 2rem;
+        text-align: center;
+    }
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+        border-radius: 5px;
+        padding: 1rem 2rem;
+        margin: 0rem 1rem 0rem 1rem;
+    }
+
+    .demo {
+        background-color: $second-color;
+        color: white;
+        border: none;
+    }
+
+    .tour {
+        color: white;
+        background-color: transparent;
+        border: 2px solid white;
+
+    }
+}
+
+@media screen and (max-width: 627px) {
+    .splash-container {
+        width: 80%;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+}

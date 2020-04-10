@@ -1,0 +1,23 @@
+<svg width="1440" height="388" viewBox="0 0 1440 388" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="bg-footer">
+<g id="Group 9">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="-50" y="0" width="1552" height="388">
+<rect id="Rectangle 5" x="-50" width="1552" height="388" fill="#173F6C"/>
+</mask>
+<g mask="url(#mask0)">
+<rect id="Rectangle 6" x="-50" width="1552" height="388" fill="#173F6C"/>
+<path id="Polygon 1" d="M329 186L445.913 -4.5H212.087L329 186Z" fill="white" fill-opacity="0.21"/>
+<path id="Polygon 3" d="M194 232L310.913 422.5H77.0866L194 232Z" fill="white" fill-opacity="0.21"/>
+<path id="Polygon 6" d="M726 121L945.104 478H506.896L726 121Z" fill="white" fill-opacity="0.21"/>
+<path id="Polygon 7" d="M726 292L815.201 437.5H636.799L726 292Z" fill="#173F6C"/>
+<path id="Polygon 4" d="M87 76L107.785 110.5H66.2154L87 76Z" fill="white" fill-opacity="0.21"/>
+<path id="Polygon 5" d="M440 232L460.785 197.5H419.215L440 232Z" fill="white" fill-opacity="0.21"/>
+<path id="Polygon 8" d="M1011 253L1075.95 145H946.048L1011 253Z" fill="white" fill-opacity="0.21"/>
+<path id="Polygon 10" d="M1385 301L1397.99 280H1372.01L1385 301Z" fill="white" fill-opacity="0.21"/>
+<path id="Polygon 9" d="M782 49L765.546 76H798.454L782 49Z" fill="white" fill-opacity="0.21"/>
+<path id="Polygon 2" d="M204 109L276.746 -9.5H131.254L204 109Z" fill="white" fill-opacity="0.21"/>
+<path id="Vector 17" d="M1123.5 421.5L888 -72.5L1123.5 -180L1333.5 251.5L1230.5 402.5L1123.5 421.5Z" fill="white" fill-opacity="0.21"/>
+</g>
+</g>
+</g>
+</svg>

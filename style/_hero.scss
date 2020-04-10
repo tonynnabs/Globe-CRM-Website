@@ -1,0 +1,154 @@
+.hero-section {
+    background: $background-color;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: $background-color;
+    color: white;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.intro-text {
+    flex: 1 1 38rem;
+    @include fluid('margin-right', 20, 150);
+
+    h1 {
+        @include fluid('font-size', 30, 90);
+        line-height: 1.2;
+    }
+
+    h2 {
+        @include fluid('font-size', 10, $header3);
+        font-weight: 200;
+    }
+}
+
+.intro-form {
+
+    .intro-image {
+
+        svg {
+            @include fluid('width', 250, 700);
+            @include fluid('height', 250, 700);
+            // width: 500px;
+            // height: 500px;
+        }
+    }
+}
+
+#plant {
+    animation: plantmotion 1s infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+#left-list {
+    animation: leftlist 1.5s infinite linear alternate;
+}
+
+#right-list {
+    animation: rightlist 1.5s infinite 0.5s linear alternate;
+}
+
+#smoke-big {
+    animation: smokebig 3s infinite;
+}
+
+#smoke-small {
+    animation: smokebig 3s infinite 0.1s;
+}
+
+
+
+@keyframes plantmotion {
+    from {
+        transform: rotateZ(-10deg);
+    }
+
+    to {
+        transform: rotateZ(10deg)
+    }
+}
+
+@keyframes leftlist {
+    from {
+        transform: translateY(-9%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes rightlist {
+    from {
+        transform: translateY(-9%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes smokebig {
+    0% {
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 0.5;
+        transform: translateY(0%);
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+}
+
+
+@media screen and (max-width: 1084px) {
+    .intro-text {
+        margin-right: 1.5rem;
+    }
+
+}
+
+@media screen and (max-width: 994px) {
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .intro-text {
+        flex-grow: unset;
+        flex-basis: unset;
+        text-align: center;
+        margin-right: 0rem;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0rem;
+        align-self: flex-end;
+        justify-content: center;
+
+    }
+
+    .intro-form {
+        flex-grow: unset;
+        flex-basis: unset;
+        align-self: flex-start;
+    }
+
+}

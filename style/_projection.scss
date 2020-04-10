@@ -1,0 +1,92 @@
+.projection {
+    width: 90%;
+    margin: auto;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.projection div:nth-child(odd) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $light-blue;
+    padding: 3rem;
+}
+
+.left-content {
+    flex: 1 1 40rem;
+    flex-direction: column;
+    text-align: left !important;
+    padding: 0rem 0rem 2rem 0rem !important;
+
+    h2 {
+        align-self: flex-start;
+        @include fluid('font-size', 20, 40)
+    }
+}
+
+.check-list {
+    flex: 1 1 30rem;
+    margin-left: 10rem;
+    display: flex;
+    flex-direction: column;
+
+    li {
+        padding: 1rem 0rem;
+
+        span {
+            padding-right: 1.2rem;
+            color: $second-color;
+        }
+    }
+}
+
+.projection div:nth-child(even) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 3rem;
+    margin-top: 3rem;
+
+    .left-content {
+        background-color: white;
+    }
+}
+
+.projection div:last-child {
+    padding-bottom: 0rem;
+}
+
+@media screen and (max-width: 994px) {
+    .projection div:nth-child(odd) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .left-content {
+        flex-grow: unset;
+        flex-basis: unset;
+        text-align: center !important;
+
+        h2 {
+            align-self: center;
+        }
+    }
+
+    .check-list {
+        flex-grow: unset;
+        flex-basis: unset;
+        margin-left: 0rem;
+
+    }
+
+    .projection div:nth-child(even) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
